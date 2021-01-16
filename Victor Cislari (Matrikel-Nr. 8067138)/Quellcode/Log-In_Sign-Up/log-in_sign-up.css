@@ -1,0 +1,84 @@
+/*Victor Cislari (DHBW-Mannheim, Matrikel-Nr.: 8067138)*/
+
+#mainContent {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    margin-top: 20px;
+    /* the first part will be for the forums, the second will be for the buttons */
+}
+
+#log-in-container {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row: 1;
+    /*
+    grid-row:1  explanation->
+    puts the buttons in the same row as with the input fields:
+    basically align them horizontally side by side.  */
+    padding: 10px;
+    text-align: center;
+}
+
+#sign-up-container {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row: 1;
+    /*
+    grid-row:1  explanation->
+    puts the buttons in the same row as with the input fields:
+    basically align them horizontally side by side.  */
+    padding: 10px;
+    text-align: center;
+}
+
+#buttons {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 1;
+    /*
+    grid-row:1  explanation->
+    puts the buttons in the same row as with the input fields:
+    basically align them horizontally side by side.  */
+    margin-top: 30px;
+}
+
+button {
+    height: 40px;
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+#containers input {
+    width: 100%;
+    height: 40px;
+    border-radius: 15px;
+    border-top: none;
+    border-bottom: none;
+}
+
+
+/* if I'd say containers, than the signup container would push the login container up and vise versa. this way i get them both on top. */
+
+#messages {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /* giving it the full width */
+    text-align: center;
+}
+
+#messages p {
+    border: 1px solid rgb(0, 128, 255);
+    border-radius: 15px;
+    background: black;
+    color: rgb(0, 255, 0);
+    text-align: center;
+}
+
+@media screen and (max-width: 840px) {
+    #mainContent {
+        display: block;
+        /* removes the grid and makes the website look more vertical */
+    }
+}

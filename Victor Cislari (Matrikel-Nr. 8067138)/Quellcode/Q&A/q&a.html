@@ -1,0 +1,173 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../style/navigation-bar.css">
+    <link rel="stylesheet" href="q&a.css">
+    <link rel="stylesheet" href="../style/credentials.css">
+    <script src="q&a.js"></script>
+    <script>
+        window.onload = function() {
+            //q&a.js
+            //getUser(user); //sending a reference of the current user object to q&a.js
+            loadAnswerAmount(); //load the amount of answers per question, for example for span id="answersAmount".
+        };
+    </script>
+    <title>Q&A</title>
+</head>
+
+<body>
+    <nav class="header">
+        <a class="logo" href='../index.html'>Gauß.com</a>
+        <div class="header-right">
+            <a href='../Log-In_Sign-Up/log-in_sign-up.html' id="Log-In/Sign-Up">Log-In/Sign-Up</a>
+            <a href='../Gauss Calculator/gauss_calculator.html'>Gauß Rechner</a>
+            <a href='../Gauss Quiz/gauss_quiz.html'>Gauß Quiz</a>
+            <a href='../News/news.html'>News</a>
+            <a href='../Merch Shop/merch-shop.html'>Merch-Shop</a>
+            <a href='../Q&A/q&a.html' class="active">Q&A</a>
+        </div>
+    </nav>
+
+    <section id="askQuestion">
+        <p>ask a Question</p>
+        <textarea type="textarea" id="question"></textarea>
+        <br><input type="checkbox" id="anonymous">
+        <p style="display:inline">Anonymous</p>
+        <br><button>ask question</button>
+    </section>
+    <section id="questions">
+        <div id="question 2" class="question">
+            <div id="container">
+                <div id="mainData" class="mainData">
+                    <p id="username">user1</p>
+                    <p id="question">where is my butter?</p>
+                    <p id="date">2020-01-08T08:01</p>
+                </div>
+                <div id="oppinions">
+                    <button id="likes" onclick="oppinion(this)">
+                        likes <span id="amount">2</span>
+                        <input type="hidden" id="used" value=false><!-- it's gonna be a string anyway -->
+                    </button>
+                    <button id="dislikes" onclick="oppinion(this)">
+                        dislikes <span id="amount">1</span>
+                        <input type="hidden" id="used" value=false>
+                    </button>
+                </div>
+                <div class="give_answer">
+                    <button id="write_answer" onclick="composeAnswer(this.parentElement)">write an answer</button>
+                    <section id="answerComposition">
+                        <textarea id="answer" rows="4"></textarea>
+                        <br><button id="send_answer">send
+                            answer</button>
+                        <button id="discardAnswer" onclick="discardAnswer(this.parentElement.parentElement)">discard
+                            answer</button>
+                        <br><input type="checkbox" id="anonymous">
+                        <p style="display:inline">Anonymous</p>
+                        <!-- allows the user to post anonymously -->
+                    </section>
+                </div>
+            </div>
+            <!-- answers corresponding to the question -->
+            <p onclick="changeState(this.parentElement)" class="answersCounter">View <span id="answers_amount">
+                    <!-- javaScript generated -->
+                </span>Answers</p>
+            <div id="answers_box" class="close">
+                <div id="answer_1" class="answer">
+                    <div id="mainData">
+                        <p id="username">user2</p>
+                        <p id="answer">Not in your toaster.</p>
+                        <p id="date">2020-01-08T09:01</p>
+                    </div>
+                    <div id="oppinions">
+                        <button id="likes" onclick="oppinion(this)">
+                            likes <span id="amount">3</span>
+                            <input type="hidden" id="used" value=false><!-- it's gonna be a string anyway -->
+                        </button>
+                        <button id="dislikes" onclick="oppinion(this)">
+                            dislikes <span id="amount">5</span>
+                            <input type="hidden" id="used" value=false>
+                        </button>
+                    </div>
+                </div>
+                <div id="answer_2" class="answer">
+                    <div id="mainData">
+                        <p id="username">user1</p>
+                        <p id="answer">Thx, it was under my toaster.</p>
+                        <p id="date">2020-01-08T09:03</p>
+                    </div>
+                    <div id="oppinions">
+                        <button id="likes" onclick="oppinion(this)">
+                            likes <span id="amount">1</span>
+                            <input type="hidden" id="used" value=false><!-- it's gonna be a string anyway -->
+                        </button>
+                        <button id="dislikes" onclick="oppinion(this)">
+                            dislikes <span id="amount">0</span>
+                            <input type="hidden" id="used" value=false>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="question 1" class="question">
+            <div id="container">
+                <div id="mainData" class="mainData">
+                    <p id="username">user2</p>
+                    <p id="question">where is the mouse?</p>
+                    <p id="date">2002-01-10T18:10</p>
+                </div>
+                <div id="oppinions">
+                    <button id="likes" onclick="oppinion(this)">
+                        likes <span id="amount">2</span>
+                        <input type="hidden" id="used" value=false><!-- it's gonna be a string anyway -->
+                    </button>
+                    <button id="dislikes" onclick="oppinion(this)">
+                        dislikes <span id="amount">3</span>
+                        <input type="hidden" id="used" value=false>
+                    </button>
+                </div>
+                <div class="give_answer">
+                    <button id="write_answer" onclick="composeAnswer(this.parentElement)">write an answer</button>
+                    <section id="answerComposition">
+                        <textarea id="answer" rows="4"></textarea>
+                        <br><button id="send_answer">send
+                            answer</button>
+                        <button id="discardAnswer" onclick="discardAnswer(this.parentElement.parentElement)">discard
+                            answer</button>
+                        <br><input type="checkbox" id="anonymous">
+                        <p style="display:inline">Anonymous</p>
+                        <!-- allows the user to post anonymously -->
+                    </section>
+                </div>
+            </div>
+            <!-- answers corresponding to the question -->
+            <p onclick="changeState(this.parentElement)" class="answersCounter">View <span id="answers_amount">
+                    <!-- javaScript generated -->
+                </span>Answers</p>
+            <div id="answers_box" class="close">
+                <div id="answer_1" class="answer">
+                    <div id="mainData">
+                        <p id="username">user2</p>
+                        <p id="answer">Under Your Desk.</p>
+                        <p id="date">2020-01-10T18:10</p>
+                    </div>
+                    <div id="oppinions">
+                        <button id="likes" onclick="oppinion(this)">
+                            likes <span id="amount">3</span>
+                            <input type="hidden" id="used" value=false><!-- it's gonna be a string anyway -->
+                        </button>
+                        <button id="dislikes" onclick="oppinion(this)">
+                            dislikes <span id="amount">5</span>
+                            <input type="hidden" id="used" value=false>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- source-idea:YouTube Commentsection -->
+    <p id="credentials">
+        © Copyright 2021 Victor Cislari (DHBW-Mannheim, Matrikel-Nr.: 8067138)
+    </p>
+</body>
+
+</html>

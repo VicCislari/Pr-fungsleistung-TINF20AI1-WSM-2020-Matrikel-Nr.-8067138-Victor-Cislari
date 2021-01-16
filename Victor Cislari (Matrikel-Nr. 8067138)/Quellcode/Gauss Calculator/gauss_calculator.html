@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../style/credentials.css">
+    <script src="gauss.js"></script>
+    <script src="canvas.js"></script>
+    <script>
+        function operate(operation) //combines functions from gauss.js and canvas.js
+        {
+            //gauss.js
+            if (operation == "solve") calculate();
+            else clear_table();
+
+            //canvas.js 
+            startAnimation(); //starts the Animationprocess
+        }
+
+        window.onload = function() {
+            //canvas.js
+            startCanvasAnimation(); //reads all important parameters and starts the animationprocess
+        };
+    </script>
+    <link rel="stylesheet" href="../style/navigation-bar.css">
+    <title>Gauß Rechner</title>
+    <menu type="context" id="menu">
+        <menuitem label="clear" onclick="operate('clear') ">
+        </menuitem>
+        <menuitem label="solve" onclick="calculate('solve')">
+        </menuitem>
+    </menu>
+    <style>
+        #credentials {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body contextmenu="menu">
+    <div id="mainContent">
+
+        <nav class="header">
+            <a class="logo" href='../index.html'>Gauß.com</a>
+            <div class="header-right">
+                <a href='../Log-In_Sign-Up/log-in_sign-up.html'>Log-In/Sign-Up</a>
+                <a href='../Gauss Calculator/gauss_calculator.html' class="active">Gauß Rechner</a>
+                <a href='../Gauss Quiz/gauss_quiz.html'>Gauß Quiz</a>
+                <a href='../News/news.html'>News</a>
+                <a href='../Merch Shop/merch-shop.html'>Merch-Shop</a>
+                <a href='../Q&A/q&a.html'>Q&A</a>
+            </div>
+        </nav>
+
+        <div id="divIdGaussTable">
+
+            <!-- this div acts as a placeholder/placespecifyer 
+            for when the function clear() will delete the 
+            contents of 'gauss_table_length_3' and replace it with 
+            a copy of the same table just with no entered values -->
+
+            <table id="gauss_table">
+                <tr>
+                    <td><input type="number" value="0"></td>
+                    <td><input type="number" value="0"></td>
+                    <td><input type="number" value="0"></td>
+                    <td><input type="number" value="0"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" value="0"></td>
+                    <td><input type="number" value="0"></td>
+                    <td><input type="number" value="0"></td>
+                    <td><input type="number" value="0"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" value="0"></td>
+                    <td><input type="number" value="0"></td>
+                    <td><input type="number" value="0"></td>
+                    <td><input type="number" value="0"></td>
+                </tr>
+            </table>
+        </div>
+
+        <button onclick="operate('clear')" id="buttonClear">clear</button>
+        <button onclick="operate('solve')" id="buttonSolve">solve</button>
+
+        <div id="solutions" style="display:none">
+            <table id="gauss_table_length_3">
+                <tr>
+                    <td>
+                        <p>x1:...</p>
+                    </td>
+                    <td>
+                        <p>x2:...</p>
+                    </td>
+                    <td>
+                        <p>x3:...</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <p id="credentials">
+            © Copyright 2021 Victor Cislari (DHBW-Mannheim, Matrikel-Nr.: 8067138)
+        </p>
+    </div>
+
+    <canvas id="canvas"></canvas>
+</body>
+
+</html>

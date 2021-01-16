@@ -1,0 +1,154 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="../style/navigation-bar.css">
+    <link rel="stylesheet" href="../style/credentials.css">
+
+    <link rel="stylesheet" href="gauss_quiz.css">
+    <link rel="stylesheet" href="answers.css">
+
+    <title>Gauß Quiz</title>
+
+    <!-- smooth scrolling -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js">
+    </script>
+    <script>
+        const scroll = new SmoothScroll('.navbar a[href*="#"]', {
+            speed: 500
+        });
+    </script>
+    <!-- the two scripts above are for smooth scrolling -->
+    <script src="buttonClick.js"></script>
+</head>
+
+<body>
+    <nav class="header">
+        <a class="logo" href='../index.html'>Gauß.com</a>
+        <div class="header-right">
+            <a href='../Log-In_Sign-Up/log-in_sign-up.html' id="Log-In/Sign-Up">Log-In/Sign-Up</a>
+            <a href='../Gauss Calculator/gauss_calculator.html'>Gauß Rechner</a>
+            <a href='../Gauss Quiz/gauss_quiz.html' class="active">Gauß Quiz</a>
+            <a href='../News/news.html'>News</a>
+            <a href='../Merch Shop/merch-shop.html'>Merch-Shop</a>
+            <a href='../Q&A/q&a.html'>Q&A</a>
+        </div>
+    </nav>
+
+    <div class="container" id="container">
+
+        <div id="questions_answers" class="noResultsYet">
+            <section id="question1">
+                <h1>In welchem Jahr wurde Gauß geboren?</h1>
+                <div class="single-choice-answers">
+                    <button onclick="buttonClick(this)">1777</button>
+                    <button onclick="buttonClick(this)">1666</button>
+                    <button onclick="buttonClick(this)">1888</button>
+                </div>
+                <ul class="navbar">
+                    <li>
+                        <a href="#question2">NEXT</a>
+                    </li>
+                    <li>
+                        <a class="getResults" href="#results">RESULTS</a>
+                    </li>
+                </ul>
+            </section>
+            <section id="question2">
+                <h1>Wie hieß Gauß mit vollen Name?</h1>
+                <div class="single-choice-answers">
+                    <button onclick="buttonClick(this)">Gauß von Bismarck</button>
+                    <button onclick="buttonClick(this)">Johann Friedrich Carl Gauß</button>
+                    <button onclick="buttonClick(this)">Rupert von Gauß</button>
+                    <button onclick="buttonClick(this)">Gauß der Große</button>
+                </div>
+                <ul class="navbar">
+                    <li>
+                        <a href="#question1">PREVIOUS</a>
+                    </li>
+                    <li>
+                        <a href="#question3">NEXT</a>
+                    </li>
+                    <li>
+                        <a class="getResults" href="#results">RESULTS</a>
+                    </li>
+                </ul>
+            </section>
+            <section id="question3">
+                <h1>Was war Gauß Haarfarbe?</h1>
+                <div class="single-choice-answers">
+                    <button onclick="buttonClick(this)">Hauptsächlich grau</button>
+                    <button onclick="buttonClick(this)">blond</button>
+                    <button onclick="buttonClick(this)">türkis</button>
+                </div>
+                <ul class="navbar">
+                    <li>
+                        <a href="#question2">PREVIOUS</a>
+                    </li>
+                    <li>
+                        <a href="#question4">NEXT</a>
+                    </li>
+                    <li>
+                        <a class="getResults" href="#results">RESULTS</a>
+                    </li>
+                </ul>
+            </section>
+            <section id="question4">
+                <h1>Wo ist Gauß aufgezogen worden?</h1>
+                <div class="single-choice-answers">
+                    <button onclick="buttonClick(this)">Brunschweig</button>
+                    <button onclick="buttonClick(this)">Deutschland</button>
+                    <button onclick="buttonClick(this)">Amsterdam aber früh nach Deutschland gekommen</button>
+                    <button onclick="buttonClick(this)">Hanover</button>
+                </div>
+                <ul class="navbar">
+                    <li>
+                        <a href="#question3">PREVIOUS</a>
+                    </li>
+                    <li>
+                        <a href="#question5">NEXT</a>
+                    </li>
+                    <li>
+                        <a class="getResults" href="#results">RESULTS</a>
+                    </li>
+                </ul>
+            </section>
+            <section id="question5">
+                <h1>Wie viele Geschwister hatte Gauß?</h1>
+                <div class="single-choice-answers">
+                    <button onclick="buttonClick(this)">1</button>
+                    <button onclick="buttonClick(this)">5</button>
+                    <button onclick="buttonClick(this)">2</button>
+                    <button onclick="buttonClick(this)">keine</button>
+                </div>
+                <ul class="navbar">
+                    <li>
+                        <a href="#question4">PREVIOUS</a>
+                    </li>
+                    <li>
+                        <a class="getResults" href="#results">RESULTS</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <section id="results">
+            <div id="display">
+                <p>You have reached
+                    <span id="progressValue">50</span>%
+                </p>
+                <a href="#container">move up</a>
+            </div>
+
+            <progress max=10 value=5>
+                <!-- has no deep functionality, is just to showcase how to it can be used -->
+            </progress>
+        </section>
+        <p id="credentials">
+            © Copyright 2021 Victor Cislari (DHBW-Mannheim, Matrikel-Nr.: 8067138)
+        </p>
+    </div>
+</body>
+
+</html>

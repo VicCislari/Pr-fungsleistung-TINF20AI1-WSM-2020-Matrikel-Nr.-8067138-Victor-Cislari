@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../style/navigation-bar.css">
+    <link rel="stylesheet" href="news.css">
+    <link rel="stylesheet" href="../style/credentials.css">
+    <script src="news.js"></script>
+    <script>
+        window.onload = function() {
+            setMaxDate("datetime-picker-from");
+            setMaxDate("datetime-picker-until");
+
+            allNews = document.getElementById("allNews").children;
+            newsLikedContainer = document.getElementById("newsLikedContainer");
+            newLiked = document.getElementById("newsLiked");
+        }
+    </script>
+    <title>News</title>
+</head>
+
+<body>
+    <nav class="header">
+        <a class="logo" href='../index.html'>Gauß.com</a>
+        <div class="header-right">
+            <a href='../Log-In_Sign-Up/log-in_sign-up.html' id="Log-In/Sign-Up">Log-In/Sign-Up</a>
+            <a href='../Gauss Calculator/gauss_calculator.html'>Gauß Rechner</a>
+            <a href='../Gauss Quiz/gauss_quiz.html'>Gauß Quiz</a>
+            <a href='../News/news.html' class="active">News</a>
+            <a href='../Merch Shop/merch-shop.html'>Merch-Shop</a>
+            <a href='../Q&A/q&a.html'>Q&A</a>
+        </div>
+    </nav>
+
+    <div id="filterByDate">
+        <table>
+            <tr>
+                <td>
+                    <label for="datetime-picker-from">From:</label>
+                </td>
+                <td>
+                    <input type="datetime-local" id="datetime-picker-from" oninput="setDateLimitMin(this.value)">
+                </td>
+                <td>
+                    <button onclick="unset('datetime-picker-from')">unset</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for=" datetime-picker-until">Until:</label>
+                </td>
+                <td>
+                    <input type="datetime-local" id="datetime-picker-until" oninput="setDateLimitMax(this.value) ">
+                </td>
+                <td>
+                    <button onclick="unset('datetime-picker-until')">unset</button>
+                </td>
+            </tr>
+        </table>
+
+        <button onclick="filterByDate()" id="filterAllNews">filter by date</button>
+    </div>
+
+    <section id="allNews">
+        <!-- all the articles go in this section element  -->
+        <div id="article_4" class="notLiked">
+            <br><input type="text" id="publication" value="2021-01-10T04:04" readonly>
+            <p onclick="showArticle(this.parentElement)">First Sunday of the Year</p>
+            <article id="article_content" class="hideContent">
+                <button id="close" onclick="closeArticle(this.parentElement)">close</button>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, optio nemo quisquam consequuntur, saepe iusto natus eum alias magnam facilis quam ducimus provident numquam ut aliquam. Eaque harum adipisci possimus!
+                </p>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, optio nemo quisquam consequuntur, saepe iusto natus eum alias magnam facilis quam ducimus provident numquam ut aliquam. Eaque harum adipisci possimus!
+                </p>
+            </article>
+        </div>
+
+        <div id="article_3" class="notLiked">
+            <br><input type="text" id="publication" value="2021-01-08T16:15" readonly>
+            <p onclick="showArticle(this.parentElement)">First Friday of the Year</p>
+            <article id="article_content" class="hideContent">
+                <button id="close" onclick="closeArticle(this.parentElement)">close</button>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, optio nemo quisquam consequuntur, saepe iusto natus eum alias magnam facilis quam ducimus provident numquam ut aliquam. Eaque harum adipisci possimus!
+                </p>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, optio nemo quisquam consequuntur, saepe iusto natus eum alias magnam facilis quam ducimus provident numquam ut aliquam. Eaque harum adipisci possimus!
+                </p>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, optio nemo quisquam consequuntur, saepe iusto natus eum alias magnam facilis quam ducimus provident numquam ut aliquam. Eaque harum adipisci possimus!
+                </p>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, optio nemo quisquam consequuntur, saepe iusto natus eum alias magnam facilis quam ducimus provident numquam ut aliquam. Eaque harum adipisci possimus!
+                </p>
+            </article>
+        </div>
+
+        <div id="article_2" class="notLiked">
+            <br><input type="text" id="publication" value="2021-01-07T14:40" readonly>
+            <p onclick="showArticle(this.parentElement)">First Thursday of the Year</p>
+            <article class="hideContent">
+                <button id="close" onclick="closeArticle(this.parentElement)">close</button>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, optio nemo quisquam consequuntur, saepe iusto natus eum alias magnam facilis quam ducimus provident numquam ut aliquam. Eaque harum adipisci possimus!
+                </p>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, optio nemo quisquam consequuntur, saepe iusto natus eum alias magnam facilis quam ducimus provident numquam ut aliquam. Eaque harum adipisci possimus!
+                </p>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, optio nemo quisquam consequuntur, saepe iusto natus eum alias magnam facilis quam ducimus provident numquam ut aliquam. Eaque harum adipisci possimus!
+                </p>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, optio nemo quisquam consequuntur, saepe iusto natus eum alias magnam facilis quam ducimus provident numquam ut aliquam. Eaque harum adipisci possimus!
+                </p>
+            </article>
+        </div>
+
+        <div id="article_1" class="notLiked">
+            <br><input type="text" id="publication" value="2020-12-25T11:44" readonly>
+            <p onclick="showArticle(this.parentElement)">XMas</p>
+            <article class="hideContent">
+                <button id="close" onclick="closeArticle(this.parentElement)">close</button>
+                <p>Merry Christmas</p>
+            </article>
+        </div>
+        <!-- have to put the article in a <div id=article>, because otherwiese i cant use the button onclick function propperly -->
+    </section>
+
+    <p id="credentials">
+        © Copyright 2021 Victor Cislari (DHBW-Mannheim, Matrikel-Nr.: 8067138)
+    </p>
+</body>
+
+</html>

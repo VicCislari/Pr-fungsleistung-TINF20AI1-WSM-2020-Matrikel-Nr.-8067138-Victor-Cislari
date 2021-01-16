@@ -1,0 +1,62 @@
+/*Victor Cislari (DHBW-Mannheim, Matrikel-Nr.: 8067138)*/
+#allNews div {
+    border: 1px solid black;
+    transition: 0.5s;
+}
+
+#allNews div:hover {
+    -moz-box-shadow: 10px 10px 15px rgba(30, 144, 255, 0.6);
+    -webkit-box-shadow: 10px 10px 15px rgba(30, 144, 255, 0.6);
+    box-shadow: 10px 10px 15px rgba(30, 144, 255, 0.6);
+    margin-bottom: 30px;
+    transition: 0.5s;
+    transition-delay: 0.3s;
+    margin-right: 0px;
+    margin-left: 0px;
+    /* here I tried out some browser specific features
+    */
+}
+
+section {
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.showContent {
+    padding: 3px;
+}
+
+.liked {
+    background-color: rgba(140, 191, 241, 0.6);
+}
+
+
+/* the following features are for the enabling and disabling of some elements.
+goes together with javaScript*/
+
+.liked #like {
+    display: none;
+}
+
+.notLiked #dislike {
+    display: none;
+}
+
+.hideContent {
+    display: none;
+}
+
+.open_News_Liked_Container .open {
+    display: none;
+}
+
+.close_News_Liked_Container .close {
+    display: none;
+}
+
+.close_News_Liked_Container #newsLiked {
+    display: none;
+}

@@ -1,0 +1,162 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../style/navigation-bar.css">
+    <link rel="stylesheet" href="merch-shop.css">
+    <link rel="stylesheet" href="../style/credentials.css">
+    <script src="merch-shop.js"></script>
+    <title>Merch-Shop</title>
+</head>
+
+<body>
+    <nav class="header" id="main_header"> 
+        <a class="logo" href='../index.html'>Gauß.com</a>
+        <div class="header-right">
+            <a href='../Log-In_Sign-Up/log-in_sign-up.html' id="Log-In/Sign-Up">Log-In/Sign-Up</a>
+            <a href='../Gauss Calculator/gauss_calculator.html'>Gauß Rechner</a>
+            <a href='../Gauss Quiz/gauss_quiz.html'>Gauß Quiz</a>
+            <a href='../News/news.html'>News</a>
+            <a href='../Merch Shop/merch-shop.html' class="active">Merch-Shop</a>
+            <a href='../Q&A/q&a.html'>Q&A</a>
+        </div>
+    </nav>
+
+    <!-- this navigation bar is specifically made for the navigation hrough the merch-shop -->
+    <nav class="header" id="sub_header">
+        <div class="header-right" id="sub_header_anchors">
+            <a href="#cartContainer">
+                Cart
+            </a>
+        </div>
+    </nav>
+
+    <div id="container">
+        <div id="Hoodies">
+            <div id='H1' class="notInCart">
+                <img src="Hoodies/Hoodie 1.jpg" alt="Hoodie 1">
+                <br>
+                <p id='price' value='14'>Price:14 Euros</p>
+                <button id="add" onclick="add(this.parentElement);">Add to Cart</button>
+                <button id="remove" onclick="remove(this.parentElement);">Remove from Cart</button>
+            </div>
+            <div id='H2' class="notInCart">
+                <img src="Hoodies/Hoodie 2.jpg" alt="Hoodie 2">
+                <br>
+                <p id='price' value='15'>Price:15 Euros</p>
+                <button id="add" onclick="add(this.parentElement);">Add to Cart</button>
+                <button id="remove" onclick="remove(this.parentElement);">Remove from Cart</button>
+            </div>
+            <div id='H3' class="notInCart">
+                <img src="Hoodies/Hoodie 3.jpg" alt="Hoodie 3">
+                <br>
+                <p id='price' value='15'>Price:15 Euros</p>
+                <button id="add" onclick="add(this.parentElement);">Add to Cart</button>
+                <button id="remove" onclick="remove(this.parentElement);">Remove from Cart</button>
+            </div>
+            <div id='H4' class="notInCart">
+                <img src="Hoodies/Hoodie 4.jpg" alt="Hoodie 4">
+                <br>
+                <p id='price' value='11'>Price:11 Euros</p>
+                <button id="add" onclick="add(this.parentElement);">Add to Cart</button>
+                <button id="remove" onclick="remove(this.parentElement);">Remove from Cart</button>
+            </div>
+            <div id='H5' class="notInCart">
+                <img src="Hoodies/Hoodie 5.jpg" alt="Hoodie 5">
+                <br>
+                <p type="hidden" id='price' value='12'>Price:4 Euros</p>
+                <button id="add" onclick="add(this.parentElement);">Add to Cart</button>
+                <button id="remove" onclick="remove(this.parentElement);">Remove from Cart</button>
+            </div>
+            <div id='H6' class="notInCart">
+                <img src="Hoodies/Hoodie 6.jpg" alt="Hoodie 6">
+                <br>
+                <p id='price' value='15'>Price:15 Euros</p>
+                <button id="add" onclick="add(this.parentElement);">Add to Cart</button>
+                <button id="remove" onclick="remove(this.parentElement);">Remove from Cart</button>
+            </div>
+            <div id='H7' class="notInCart">
+                <img src="Hoodies/Hoodie 7.jpg" alt="Hoodie 7">
+                <br>
+                <p id='price' value='13'>Price:15 Euros</p>
+                <button id="add" onclick="add(this.parentElement);">Add to Cart</button>
+                <button id="remove" onclick="remove(this.parentElement);">Remove from Cart</button>
+            </div>
+            <div id='H8' class="notInCart">
+                <img src="Hoodies/Hoodie 8.jpg" alt="Hoodie 8">
+                <br>
+                <p type="hidden" id='price' value='15'>Price:15 Euros</p>
+                <button id="add" onclick="add(this.parentElement);">Add to Cart</button>
+                <button id="remove" onclick="remove(this.parentElement);">Remove from Cart</button>
+            </div>
+            <div id='H9' class="notInCart">
+                <img src="Hoodies/Hoodie 9.jpg" alt="Hoodie 9">
+                <br>
+                <p id='price' value='20'>Price:20 Euros</p>
+                <button id="add" onclick="add(this.parentElement);">Add to Cart</button>
+                <button id="remove" onclick="remove(this.parentElement);">Remove from Cart</button>
+            </div>
+            <div id='H10' class="notInCart">
+                <img src="Hoodies/Hoodie 10.jpg" alt="Hoodie 10">
+                <br>
+                <p id='price' value='15'>Price:15 Euros</p>
+                <button id="add" onclick="add(this.parentElement);">Add to Cart</button>
+                <button id="remove" onclick="remove(this.parentElement);">Remove from Cart</button>
+            </div>
+        </div>
+
+        <div id="Masks">
+            <div id='M1' class="notInCart">
+                <img src="Masks/Mask 1.jpg" alt="Mask 1">
+                <br>
+                <p id='price' value='2'>Price:2 Euros</p>
+                <button id="add" onclick="add(this.parentElement);">Add to Cart</button>
+                <button id="remove" onclick="remove(this.parentElement);">Remove from Cart</button>
+            </div>
+            <div id='M2' class="notInCart">
+                <img src="Masks/Mask 2.jpg" alt="Mask 2">
+                <br>
+                <p id='price' value='4'>Price:4 Euros</p>
+                <button id="add" onclick="add(this.parentElement);">Add to Cart</button>
+                <button id="remove" onclick="remove(this.parentElement);">Remove from Cart</button>
+            </div>
+            <div id='M3' class="notInCart">
+                <img src="Masks/Mask 3.jpg" alt="Mask 3">
+                <br>
+                <p id='price' value='3'>Price:3 Euros</p>
+                <button id="add" onclick="add(this.parentElement);">Add to Cart</button>
+                <button id="remove" onclick="remove(this.parentElement);">Remove from Cart</button>
+            </div>
+            <div id='M4' class="notInCart">
+                <img src="Masks/Mask 4.jpg" alt="Mask 4">
+                <br>
+                <p id='price' value='1.5'>Price:1.5 Euros</p>
+                <button id="add" onclick="add(this.parentElement);">Add to Cart</button>
+                <button id="remove" onclick="remove(this.parentElement);">Remove from Cart</button>
+            </div>
+            <div id='M5' class="notInCart">
+                <img src="Masks/Mask 5.jpg" alt="Mask 5">
+                <br>
+                <p id='price' value='2.5'>Price:2.5 Euros</p>
+                <button id="add" onclick="add(this.parentElement);">Add to Cart</button>
+                <button id="remove" onclick="remove(this.parentElement);">Remove from Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <a href="#main_header">to the top <!-- brings you to the top of the page, where the main navigation bar starts --></a>
+    <div id="cartContainer" class="emptyCart">
+        <a href="purchase.html"> purchase Items!</a>
+        <div id="cart">
+            <!-- the actual cart -->
+        </div>
+        <a href="purchase.html"> purchase Items!</a>
+        <p id="emptyMessage">Your cart is currently empty</p>
+    </div>
+    <a href="#main_header">to the top</a>
+    <p id="credentials">
+        © Copyright 2021 Victor Cislari (DHBW-Mannheim, Matrikel-Nr.: 8067138)
+    </p>
+</body>
+
+</html>

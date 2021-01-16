@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../style/navigation-bar.css">
+    <link rel="stylesheet" href="log-in_sign-up.css">
+    <link rel="stylesheet" href="../style/credentials.css">
+    <script src="log-in_sign-up.js"></script>
+    <title>Log-In/Sign-Up</title>
+</head>
+
+<body>
+    <nav class="header">
+        <a class="logo" href='../index.html'>Gauß.com</a>
+        <div class="header-right">
+            <a href='../Log-In_Sign-Up/log-in_sign-up.html' class="active">Log-In/Sign-Up</a>
+            <a href='../Gauss Calculator/gauss_calculator.html'>Gauß Rechner</a>
+            <a href='../Gauss Quiz/gauss_quiz.html'>Gauß Quiz</a>
+            <a href='../News/news.html'>News</a>
+            <a href='../Merch Shop/merch-shop.html'>Merch-Shop</a>
+            <a href='../Q&A/q&a.html'>Q&A</a>
+        </div>
+    </nav>
+
+    <div id="mainContent">
+        <div id="buttons">
+            <div id="log-in-buttons">
+                <button onclick="submit_log_in_data()" id="submit-log-in">Log In</button><br>
+                <button id="sign-up" onclick="activate_sign_up()">new Here? Sign up instead</button><br>
+            </div>
+
+            <div id="sign-up-buttons" style="display:none">
+                <button onclick="submit_sign_up_data()" id="submit-sign-up">Sign Up</button><br>
+                <button id="log-in" onclick="activate_log_in()">log-in-instead</button>
+            </div>
+        </div>
+
+        <div id="containers">
+            <div id="log-in-container">
+                <form>
+                    <label for="eMailAddr">*E-Mail-Address:</label><br>
+                    <input type="text" id="eMailAddr" name="eMailAddr"><br>
+                    <label for="password">*Password:</label><br>
+                    <input type="password" id="password" name="password"><br>
+                </form>
+            </div>
+
+            <div id="sign-up-container" style="display:none">
+                <form>
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname"><br>
+
+                    <label for="bdate">Birthdate:</label><br>
+                    <input type="date" id="bdate" name="bdate"><br>
+
+                    <label for="pnumber">Phone-Number:</label><br>
+                    <input type="text" id="pnumber" name="pnumber"><br>
+
+                    <label for="username">Username:</label><br>
+                    <input type="text" id="username" name="username"><br>
+
+                    <label for="eMailAddr_signup">*eMailAddr-Mail-Address:</label><br>
+                    <input type="text" id="eMailAddr_signup" name="eMailAddr"><br>
+
+                    <label for="password_signup">*Password:</label><br>
+                    <input type="password" id="password_signup" name="password"><br>
+
+                    <label for="passwordRepeat">*Repeat the Password:</label><br>
+                    <input type="password" id="passwordRepeat" name="pwordRepeat"><br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="messages" class="messages_hide">
+        <p id="succesfulLogIn" style="display:none">successful Log In</p>
+
+        <p id="succesfulSignUp" style="display:none">successful Sign Up</p>
+    </div>
+
+    <p id="credentials">
+        © Copyright 2021 Victor Cislari (DHBW-Mannheim, Matrikel-Nr.: 8067138)
+    </p>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+/*Victor Cislari (DHBW-Mannheim, Matrikel-Nr.: 8067138)*/
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    height: 100vh;
+    margin: 10px;
+    margin-top: 0px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Warning, in the following I am designing the class navbar, not the navigation abr, which you see at the top of the website */
+
+.navbar {
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 60px;
+}
+
+.navbar li {
+    margin: 0 1rem;
+    padding: 1rem;
+}
+
+.navbar {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+}
+
+.navbar li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+
+.navbar li a:hover {
+    color: skyblue;
+    cursor: pointer;
+}
+
+nav {
+    position: fixed;
+    width: calc(100% - 40px);
+    /*this is so that the navbar doesn"t go over the slidebarr*/
+    /* Here I design the navigation bar at the top of the website. Only minor adjustments. I use 97.5 view width, so that it doesn't stick to the right side of the screen.
+I didn't use margin, because than it woudn't be responsive enough.
+*/
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+section h1 {
+    font-size: 4rem;
+    color: black;
+}
+
+progress {
+    width: calc(100vw - 100px);
+    height: 15vh;
+    /* transform: rotate(-90deg); */
+}
+
+p {
+    color: black;
+    margin: 10px;
+}
+
+
+/*
+.noResultsYet .getResults {
+    display: none;
+}
+*/
+
+@media screen and (max-width: 840px) {
+    #results {
+        margin-left: 50px;
+        /* this is so that the "You have reached" message doesn't stick to the side" */
+        display: grid;
+        /* grid-template-rows: 35% 35%; */
+        grid-template-columns: 10% 90%;
+        /*  grid-template-rows: 60% 40%;*/
+    }
+    progress {
+        transform: rotate(-90deg);
+        width: 90vh;
+        /*margin-top: 450px;*/
+        margin-bottom: 10px;
+        /*
+        grid-row-start: 1;
+        grid-row-end: 2;*/
+    }
+    #display {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        /* grid-row-start: 1;
+        grid-row-end: 5; */
+    }
+    nav {
+        position: relative;
+        width: auto;
+        /*resets the width to what it was before, this is specified in header.css*/
+    }
+}

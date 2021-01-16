@@ -1,0 +1,29 @@
+/*Victor Cislari (DHBW-Mannheim, Matrikel-Nr.: 8067138)*/
+
+.single-choice-answers {
+    overflow: hidden;
+    background-color: white;
+    padding: 20px 10px;
+    text-align: center
+}
+
+.single-choice-answers button {
+    color: black;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.single-choice-answers button:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.single-choice-answers button.active {
+    background-color: dodgerblue;
+    color: white;
+}

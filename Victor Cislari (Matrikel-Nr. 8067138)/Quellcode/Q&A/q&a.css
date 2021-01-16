@@ -1,0 +1,103 @@
+/*Victor Cislari (DHBW-Mannheim, Matrikel-Nr.: 8067138)*/
+.answersCounter {
+    color: blue;
+    cursor: pointer;
+}
+
+.close {
+    display: none;
+}
+
+#answers_box {
+    /*  border: 1px solid black; */
+    padding: 3px;
+}
+
+.question {
+    border: 5px solid red;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 3px;
+    text-align: center;
+}
+
+#askQuestion {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.give_answer #answerComposition {
+    display: none;
+}
+
+.write_answer #write_answer {
+    display: none;
+}
+
+#questions .active {
+    background: dodgerblue;
+    color: white;
+}
+
+.answer {
+    margin-bottom: 10px;
+    border-top: 1px solid black;
+}
+
+textarea {
+    width: calc(100% - 5px);
+    /* this is so that the tetarea doesn't toucht the border of its parentElement */
+}
+
+#container {
+    display: grid;
+    grid-template-columns: calc(100%/4) calc(100%/6) calc(100% - calc(100%/4) - calc(100%/6));
+    /*the third calculation subtracts the previouse columns lengths from 100%, basically getting whatever is left*/
+}
+
+#container #mainData {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#container #oppinions {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#container #give_answer {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    #container {
+        height: 60vh;
+        grid-template-rows: calc(100%/3) calc(100%/3) calc(100%/3);
+        grid-template-columns: 100%;
+        /* have to do this, because otherwise the old information will stay */
+    }
+    #container #mainData {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        text-align: center;
+    }
+    #container #give_answer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        text-align: center;
+    }
+    #container #oppinions {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        text-align: center;
+    }
+}
